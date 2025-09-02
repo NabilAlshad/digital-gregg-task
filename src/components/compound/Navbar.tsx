@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
 						<Link key={index} href='#' className='text-base text-[#fff] font-semibold flex items-center gap-1'>
 							{item}
 							{(item === 'Products' || item === 'Resources') && (
-								<img src='/lower-arrow.svg' alt='Dropdown' className='w-3 h-3' />	
+								<img src='/lower-arrow.svg' alt='Dropdown' className='w-3 h-3 ml-1.5' />	
 							)}
 						</Link>
 					))}
@@ -74,14 +74,13 @@ const Navbar: React.FC = () => {
 					<div className=''>
 						<div className='flex flex-col gap-3'>
 							{data?.MenuItems.map((item, index) => (
-								<Link
-									onClick={() => setMenuOpen(false)}
-									key={index}
-									href='#'
-									className='text-base text-[#fff] font-semibold'>
-									{item}
-								</Link>
-							))}
+						<Link key={index} href='#' className='text-base text-[#fff] font-semibold flex items-center gap-1'>
+							{item}
+							{(item === 'Products' || item === 'Resources') && (
+								<img src='/lower-arrow.svg' alt='Dropdown' className='w-3 h-3 ml-1.5' />	
+							)}
+						</Link>
+					))}
 						</div>
 						<div className='my-[100px] w-full flex flex-col gap-4'>
 							<Button className='text-base text-[#fff] font-semibold'>Login</Button>
