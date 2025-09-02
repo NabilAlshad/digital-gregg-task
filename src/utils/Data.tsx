@@ -23,8 +23,14 @@ export const data: dataInterface = {
 	Description: 'Simple, transparent banking. No hidden fees and free overdrafts.',
 	Compnanytitle: 'Join 4,000+ companies already growing',
 	companies: [
-		{ img: '/bolshift.png', alt: 'Company 1' },
-		{ img: '/lightbox.png', alt: 'Company 2' },
+		{
+			img: '/bolshift.png',
+			alt: 'Company 1'
+		},
+		{
+			img: '/lightbox.png',
+			alt: 'Company 2'
+		},
 		{ img: '/fetaherdev.png', alt: 'Company 3' },
 		{ img: '/spher.png', alt: 'Company 4' },
 		{ img: '/globalbank.png', alt: 'Company 5' },

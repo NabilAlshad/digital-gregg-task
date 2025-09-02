@@ -23,7 +23,8 @@ const Hero = () => {
 			</div>
 
 			<div>
-				<img src="/hero-banner.png" alt="Hero Image" className='w-full ' />
+				<img src="/hero-banner.png" alt="Hero Image" className='hidden lg:block w-full h-full ' />
+				<img src="/hero-banner-mob.png" alt="Hero Image" className='lg:hidden w-full h-full ' />
 			</div>
 		</div>
 	);
