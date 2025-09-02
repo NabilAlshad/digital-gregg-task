@@ -14,12 +14,12 @@ const Navbar: React.FC = () => {
 			document.body.style.overflow = '';
 		}
 		return () => {
-			document.body.style.overflow = '';
+		document.body.style.overflow = '';
 		};
 	}, [menuOpen]);
 
 	return (
-		<nav className='flex  justify-around bg-[#53389E] w-full p-5'>
+		<nav className='flex  justify-between px-7 py-5 lg:justify-around bg-[#53389E] w-full lg:p-5'>
 			<div className='flex'>
 				<div className='flex justify-between items-center mr-5'>
 					<Image src='/logo.png' alt='Logo' width={30} height={30} className='mr-2' priority />
@@ -28,8 +28,11 @@ const Navbar: React.FC = () => {
 
 				<div className='hidden lg:flex gap-8 mx-5 items-center'>
 					{data?.MenuItems.map((item, index) => (
-						<Link key={index} href='#' className='text-base text-[#fff] font-semibold'>
+						<Link key={index} href='#' className='text-base text-[#fff] font-semibold flex items-center gap-1'>
 							{item}
+							{(item === 'Products' || item === 'Resources') && (
+								<img src='/lower-arrow.svg' alt='Dropdown' className='w-3 h-3' />	
+							)}
 						</Link>
 					))}
 				</div>
@@ -80,7 +83,7 @@ const Navbar: React.FC = () => {
 								</Link>
 							))}
 						</div>
-						<div className='my-[100px] flex flex-col gap-4'>
+						<div className='my-[100px] w-full flex flex-col gap-4'>
 							<Button className='text-base text-[#fff] font-semibold'>Login</Button>
 							<Button className='text-base text-[#fff] font-semibold bg-[#7f56d9] px-4 py-2 rounded-lg'>
 								Sign up
